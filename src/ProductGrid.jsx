@@ -1,8 +1,17 @@
 import React from "react";
-import Products from "../mockdata/Product";
+import Products from "../../mockdata/Product";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
+/**
+ * Renders a grid of products.
+ * Each product is displayed as a ProductCard.
+ *
+ * @param {object} props - The component props.
+ * @param {Function} props.onAddToCart - Function to handle adding a product to the cart.
+ * @param {object} props.cart - The current state of the shopping cart.
+ * @returns {JSX.Element} The ProductGrid component.
+ */
 const ProductGrid = ({ onAddToCart, cart }) => {
   const navigate = useNavigate();
 
